@@ -2,7 +2,7 @@
 Envolva todo o código desse desafio em uma IIFE.
 Crie um arquivo chamado index.html e adicione esse script ao HTML.
 */
-
+//function life() {
 /*
 Crie uma função construtora chamada "Person". Esse construtor deve ter
 as seguintes características:
@@ -21,7 +21,22 @@ as seguintes características:
   adicionados à idade original (age). Esse método deverá retornar o objeto
   que será instanciado.
 */
-// ?
+//
+function Person(name, lastName, age) {
+  this.name = name;
+  this.lastName = lastName;
+  this.age = age;
+  this.getFullName = function getFullName() {
+    return this.name + ' ' + this.lastName;
+  };
+  this.getAge = function getAge() {
+    return this.age;
+  };
+  this.addAge = function addAge() {
+    this.age += arguments[0];
+    return this;
+  };
+}
 
 /*
 Crie 3 novos objetos usando o construtor acima. Os objetos serão novas
@@ -31,19 +46,30 @@ Mostre as 3 novas pessoas criadas no console (Um console.log por pessoa).
 */
 console.log("Novas pessoas criadas à partir de Person:");
 // ?
-teste;
+var nome = new Person('Eduardo', 'Oliveira', 30);
+var nome2 = new Person('Bruce', 'Wayne', 74);
+var nome3 = new Person('Tony', 'Stark', 53);
+console.log(nome);
+console.log(nome2);
+console.log(nome3);
+
 /*
 Mostre no console o nome completo de cada pessoa.
 */
 console.log("\nNomes das pessoas:");
 // ?
-
+console.log(nome.getFullName());
+console.log(nome2.getFullName());
+console.log(nome3.getFullName());
 /*
 Mostre no console as idades de cada pessoa, com a frase:
 - "[NOME COMPLETO] tem [IDADE] anos."
 */
 console.log("\nIdade das pessoas:");
 // ?
+console.log(nome.getFullName() + ' tem ' + nome.age + ' anos. ');
+console.log(nome2.getFullName() + ' tem ' + nome2.age + ' anos. ');
+console.log(nome3.getFullName() + ' tem ' + nome3.age + ' anos. ');
 
 /*
 Adicione alguns anos à cada pessoa, e mostre no console a nova idade de
@@ -52,3 +78,8 @@ cada um. A frase deverá ser no formato:
 */
 console.log("\nNova idade das pessoas:");
 // ?
+console.log(nome.getFullName() + ' agora tem ' + nome.addAge(3).getAge() + ' anos.');
+console.log(nome2.getFullName() + ' agora tem ' + nome2.addAge(1).getAge() + ' anos.');
+console.log(nome3.getFullName() + ' agora tem ' + nome3.addAge(2).getAge() + ' anos.');
+
+//};
