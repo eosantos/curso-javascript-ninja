@@ -29,20 +29,20 @@ pessoas. As variáveis deverão ser o primeiro nome da pessoa. Passe os
 parâmetros corretamente para o construtor para criar as novas pessoas.
 Mostre as 3 novas pessoas criadas no console (Um console.log por pessoa).
 */
-console.log( 'Novas pessoas criadas à partir de Person:' );
+console.log("Novas pessoas criadas à partir de Person:");
 // ?
-
+teste;
 /*
 Mostre no console o nome completo de cada pessoa.
 */
-console.log( '\nNomes das pessoas:' );
+console.log("\nNomes das pessoas:");
 // ?
 
 /*
 Mostre no console as idades de cada pessoa, com a frase:
 - "[NOME COMPLETO] tem [IDADE] anos."
 */
-console.log( '\nIdade das pessoas:' );
+console.log("\nIdade das pessoas:");
 // ?
 
 /*
@@ -50,5 +50,5 @@ Adicione alguns anos à cada pessoa, e mostre no console a nova idade de
 cada um. A frase deverá ser no formato:
 - "[NOME COMPLETO] agora tem [NOVA IDADE] anos."
 */
-console.log( '\nNova idade das pessoas:' );
+console.log("\nNova idade das pessoas:");
 // ?
